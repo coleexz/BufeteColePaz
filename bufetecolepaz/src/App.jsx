@@ -7,10 +7,9 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
-            HELLO WORLD
-    </div>
-
+      <div className = "w-screen h-screen bg-black text-white">
+            HELLO
+      </div>
   )
 }
 
