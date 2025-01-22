@@ -4,7 +4,17 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+        keyframes:{
+            xbounce: {
+                '0%, 100%': { transform: 'translateX(-1.5rem)' },
+                '50%': { transform: 'translateX(1rem)' },
+            },
+        },
+        animation:{
+            xbounce: 'xbounce 9s ease-in-out infinite',
+        }
+    },
   },
   plugins: [],
 };

@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 //importing components
@@ -19,13 +17,13 @@ function App() {
                     </div>
                     <div className = "flex justify-center gap-4">
                         {headerButtons.map((button) => (
-                            <button className = "rounded-full border border-black px-4 break-words" key={button}>{button}</button>
+                            <button className = "rounded-full text-white hover:text-[#B69D74] px-4 break-words" key={button}>{button}</button>
                         ))}
                     </div>
             </header>
-            <div className = "pt-[4.5rem] ">
+            <div className = "">
                     <Home />
-                    <AboutUs />
+                    {/* <AboutUs /> */}
             </div>
       </div>
   )
