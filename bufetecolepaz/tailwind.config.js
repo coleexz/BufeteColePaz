@@ -7,7 +7,7 @@ export default {
     extend: {
         keyframes:{
             xbounce: {
-                '0%, 100%': { transform: 'translateX(-1.5rem)' },
+                '0%, 100%': { transform: 'translateX(-0.5rem)' },
                 '50%': { transform: 'translateX(1rem)' },
             },
         },
