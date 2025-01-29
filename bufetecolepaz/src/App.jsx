@@ -3,9 +3,12 @@ import './App.css';
 
 // Importing components
 import Home from './components/Home/Home.jsx';
-import AboutUs from './components/AboutUs/AboutUs.jsx';
+import AboutJuan from './components/AboutJuan/AboutJuan.jsx';
 import Areas from './components/Areas/Areas.jsx';
 import ContactUs from './components/ContactUs/ContactUs.jsx';
+import AboutClaudia from './components/AboutClaudia/AboutClaudia.jsx';
+import Email from './components/Email/Email.jsx';
+import Prueba from './components/Prueba/Prueba.jsx';
 
 function App() {
   const headerButtons = ['Home', 'About Us', 'Services', 'Contact Us'];
@@ -79,10 +82,13 @@ function App() {
 
       {/* Main Content */}
       <div>
+        <Prueba />
         <Home />
         <Areas />
-        <AboutUs />
+        <AboutJuan />
+        <AboutClaudia />
         <ContactUs />
+        <Email />
       </div>
     </div>
   );

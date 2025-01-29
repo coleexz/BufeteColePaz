@@ -3,7 +3,7 @@ import image from '../../assets/image.png'
 
 const Home = () => {
     return (
-        <div className="bg-[#212121] h-5/6 pt-[9.5rem] relative overflow-hidden" >
+        <div className="bg-[#212121] h-5/6 pt-[6.5rem] relative overflow-hidden" >
             <div className="grid grid-rows-2 w-screen">
                 <div className="flex flex-col justify-center items-center px-10">
                     <h1 className="text-5xl text-white font-bold p-4">
@@ -36,7 +36,7 @@ const Home = () => {
             </div>
 
             {/* White section spanning both backgrounds */}
-            <div className="absolute left-[12rem] transform -translate-x-[12rem] top-[43.2%]">
+            <div className="absolute left-[12rem] transform -translate-x-[12rem] top-[41%]">
                 <div className="flex flex-row border-[0.35rem] border-[#B69D74] border-opacity-60 bg-white shadow-lg rounded-lg w-72 h-24">
                     <div className="bg-blue-500 h-[5.4rem] w-full basis-3/5">
                         IMAGEN ACA
@@ -52,7 +52,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="bg-white w-screen min-h-screen flex flex-col items-center pt-[6rem]">
+            <div className="bg-white w-screen min-h-screen flex flex-col items-center pt-[10rem]">
                 <div className="relative">
                     {/* Outer border frame */}
                     <div>

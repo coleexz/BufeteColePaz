@@ -5,6 +5,9 @@ export default {
   ],
   theme: {
     extend: {
+        fontFamily: {
+            Cambo: ['Cambo', 'serif'],
+        },
         keyframes:{
             xbounce: {
                 '0%, 100%': { transform: 'translateX(-0.5rem)' },
