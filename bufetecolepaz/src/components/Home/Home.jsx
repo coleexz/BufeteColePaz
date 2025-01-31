@@ -3,8 +3,6 @@ import image from '../../assets/image.png'
 import { motion } from 'framer-motion'
 
 const Home = () => {
-
-
     const scaleVariation = {
         initial: { opacity: 0, scale: 2 },
         whileInView: { opacity: 1, scale: 1 },
@@ -35,70 +33,86 @@ const Home = () => {
     }
 
     return (
-        <div className="bg-[#212121] h-5/6 pt-[6.5rem] relative overflow-hidden" >
-            <div className="grid grid-rows-2 w-screen">
-                <div className="flex flex-col justify-center items-center px-10">
-                    <motion.div
-                        variants={slideLeftVariation}
-                        initial="initial"
-                        whileInView="whileInView"
-                        exit="exit"
-                        viewport={{ once: false, amount: 0.01}}
-                        transition={{ duration: 1, ease: "easeInOut"}}>
-                        <h1 className="text-5xl text-white font-bold p-4">
-                            Attorneys Fight for justice
-                        </h1>
-                    </motion.div>
-                    <motion.div
-                        variants={slideLeftVariation}
-                        initial="initial"
-                        whileInView="whileInView"
-                        exit="exit"
-                        viewport={{ once: false, amount: 0.01}}
-                        transition={{ duration: 1, ease: "easeInOut"}}>
-                        <p className="justify-end lg:px-[10rem] lg:py-10 text-lg text-white p-2">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quisquam repellat perspiciatis cumque perferendis rem quam quas aliquid praesentium dolore hic consequatur minima, eaque cum recusandae, aperiam esse quod nisi.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ad cumque beatae odio voluptatum iusto commodi ab laudantium minus temporibus officia molestias impedit omnis culpa earum, rerum quasi debitis consectetur?
-                        </p>
+        <div>
+            {/* Hero Section */}
+            <div className="bg-[#212121] h-5/6 lg:h-[50rem] pt-40 lg:pt-[32rem] relative flex items-center">
+                <div className="grid grid-rows-2 lg:grid-cols-2 items-center w-screen">
+                    {/* Column #1: Text */}
+                    <div className="flex flex-col justify-center items-center px-10">
+                        <motion.div
+                            variants={slideLeftVariation}
+                            initial="initial"
+                            whileInView="whileInView"
+                            exit="exit"
+                            viewport={{ once: false, amount: 0.01 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                        >
+                            <h1 className="text-5xl text-white font-bold pb-4">
+                                Attorneys Fight for justice
+                            </h1>
+                        </motion.div>
+                        <motion.div
+                            variants={slideLeftVariation}
+                            initial="initial"
+                            whileInView="whileInView"
+                            exit="exit"
+                            viewport={{ once: false, amount: 0.01 }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
+                        >
+                            <p className="justify-end lg:px-[5.8rem] lg:py-10 text-lg text-white p-2">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quisquam
+                                repellat perspiciatis cumque perferendis rem quam quas aliquid praesentium dolore hic
+                                consequatur minima, eaque cum recusandae, aperiam esse quod nisi.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ad cumque beatae odio
+                                voluptatum iusto commodi ab laudantium minus temporibus officia molestias impedit omnis culpa
+                                earum, rerum quasi debitis consectetur?
+                            </p>
+                        </motion.div>
+                    </div>
 
-                        <div className="pt-5 lg:flex lg:justify-center lg:items-center">
-                            <button className=" bg-[#212121] border-4 p-4 border-[#B69D74] lg:px-20 lg:py-5 text-white hover:bg-[#B69D74] hover:transition-all hover:duration-500">
-                                FREE CONSULTATION -&gt;
-                            </button>
+                    {/* Column #2: Buttons */}
+                    <div>
+                        <div className="flex flex-col items-center pt-20">
+                            <div className="flex flex-row gap-20 items-center z-0 text-white">
+                                <button className="border-8 border-[#B69D74] lg:w-[20rem] lg:h-[30rem] animate-[ybounce_3s_infinite]">
+                                    foto de papa
+                                </button>
+                                <button className="border-8 border-[#B69D74] lg:w-[20rem] lg:h-[30rem] animate-[ybounce_3s_infinite]">
+                                    foto de mama
+                                </button>
+                            </div>
                         </div>
-                    </motion.div>
-                </div>
-
-                <div className="flex flex-col items-center pt-20">
-                    <div className="flex flex-row gap-20 items-center z-0 text-white">
-                        <button className="border-8 border-[#B69D74] animate-[bounce_3s_infinite]">
-                            foto de papa
-                        </button>
-                        <button className="border-8 border-[#B69D74] animate-[bounce_3s_infinite]">
-                            foto de mama
-                        </button>
                     </div>
                 </div>
-            </div>
 
-            {/* White section spanning both backgrounds */}
-            <div className="absolute left-[12rem] lg:left-[20rem] transform -translate-x-[12rem] top-[49%] lg:top-[30.5%]">
-                <div className="flex flex-row border-[0.35rem] border-[#B69D74] border-opacity-60 bg-white shadow-lg rounded-lg w-72 lg:w-[40rem] h-24 lg:h-[12rem]">
-                    <div className="bg-blue-500 h-[5.4rem] lg:h-[11.3rem] w-full basis-3/5">
-                        IMAGEN ACA
-                    </div>
-                    <div className="flex flex-col justify-center items-start w-full pl-[1.5rem] lg:pl-[10rem] text-[#B69D74]">
-                        <h1 className="text-xl font-bold whitespace-nowrap">
-                            100% Legal
-                        </h1>
-                        <h1 className="text-md font-bold whitespace-nowrap">
-                            Got Approved
-                        </h1>
-                    </div>
-                </div>
-            </div>
+                {/* White section spanning both backgrounds */}
+                                <div className="absolute left-[12.5rem] lg:left-[23rem] transform -translate-x-[12rem] top-[92%] lg:top-[93%]">
+                                    <div className="flex flex-row border-[0.45rem] border-[#B69D74] bg-white shadow-lg rounded-2xl w-72 lg:w-[80rem] h-48 lg:h-[7rem]">
+                                        <div className="grid grid-rows-4 lg:grid lg:grid-cols-4 lg:px-20 lg:gap-40 lg:pt-8 w-full text-center ">
+                                            <h1>
+                                                column 1
+                                            </h1>
 
-            <div className="bg-white w-screen min-h-screen flex flex-col items-center pt-[10rem] lg:pt-[14rem]">
+                                            <h1>
+                                                column 2
+                                            </h1>
+
+                                            <h1>
+                                                column 3
+                                            </h1>
+
+                                            <h1>
+                                                column 4
+                                            </h1>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {/* Lower White Section with Image and Mission/Vision */}
+            <div className="bg-white w-screen lg:h-screen flex flex-col lg:flex-row lg:gap-20 lg:pl-[12rem] items-center pt-[10rem] lg:pt-[6rem]">
                 <div className="relative">
                     {/* Outer border frame */}
                     <div>
@@ -115,34 +129,29 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Full-screen text container */}
+                {/* Text container for Mission & Vision */}
                 <div className="max-w-[52rem] pb-16 lg:flex lg:items-center lg:justify-center">
-                    <div className="w-screen h-max flex flex-col justify-center items-center mt-10 pt-6 px-10 text-center gap-8">
-                        <div className = "p-6 lg:p-14 bg-[#e0e1dd] rounded-lg">
+                    <div className="w-screen flex flex-col justify-center items-center mt-10 pt-6 px-10 text-center gap-8">
+                        <div className="p-6 lg:p-14 bg-[#e0e1dd] rounded-lg">
                             <h1 className="text-2xl font-bold text-[#333] pt-4">Mission</h1>
                             <p className="text-lg text-gray-600 mt-4 leading-relaxed">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At tempora unde
-                                voluptas quia facilis consequuntur commodi repellendus aperiam
-                                temporibus, cumque necessitatibus, qui, facere vitae odit a officiis
-                                aliquid quam? Incidunt.
+                                voluptas quia facilis consequuntur commodi repellendus aperiam temporibus, cumque
+                                necessitatibus, qui, facere vitae odit a officiis aliquid quam? Incidunt.
                             </p>
                         </div>
 
-                        <div className = "p-6 lg:p-14 bg-[#e0e1dd] rounded-lg">
+                        <div className="p-6 lg:p-14 bg-[#e0e1dd] rounded-lg">
                             <h1 className="text-2xl font-bold text-[#333] pt-4">Vision</h1>
                             <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                                consequatur aliquid molestiae provident suscipit temporibus inventore,
-                                fugiat, sequi dolorum iste repellendus? Sequi rerum quo laborum aut
-                                repellendus, officia et veritatis.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis consequatur aliquid
+                                molestiae provident suscipit temporibus inventore, fugiat, sequi dolorum iste
+                                repellendus? Sequi rerum quo laborum aut repellendus, officia et veritatis.
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
-
-
         </div>
     )
 }

@@ -20,14 +20,26 @@ function App() {
   return (
     <div className="w-screen h-screen">
       {/* Header */}
-      <header className="fixed top-0 flex items-center bg-[#000000] p-6 text-white w-screen z-50">
+      <header className="fixed top-0 flex items-center justify-between bg-[#000000] p-6 lg:p-8  text-white w-screen z-50">
         {/* Logo */}
-        <div className="pr-10">
-          Logo
+        <div className="px-5">Logo</div>
+
+        <div className = "pr-5">
+            {/* Desktop Navigation  */}
+            <div className="hidden lg:flex gap-6">
+            {headerButtons.map((button) => (
+                <button
+                key={button}
+                className="rounded-full text-white hover:text-[#B69D74] px-4 break-words"
+                >
+                {button}
+                </button>
+            ))}
+            </div>
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden absolute right-6">
+        <div className="lg:hidden">
           <button
             onClick={toggleMenu}
             className="focus:outline-none text-white hover:text-[#B69D74]"
@@ -48,28 +60,16 @@ function App() {
             </svg>
           </button>
         </div>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex justify-center gap-4">
-          {headerButtons.map((button) => (
-            <button
-              className="rounded-full text-white hover:text-[#B69D74] px-4 break-words"
-              key={button}
-            >
-              {button}
-            </button>
-          ))}
-        </div>
       </header>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="fixed top-16 left-0 w-full bg-[#000000] p-6 z-40 md:hidden">
+        <div className="fixed top-16 left-0 w-full bg-[#000000] p-6 z-40 lg:hidden">
           <div className="flex flex-col gap-4">
             {headerButtons.map((button) => (
               <button
-                className="text-white hover:text-[#B69D74] text-lg"
                 key={button}
+                className="text-white hover:text-[#B69D74] text-lg"
                 onClick={() => setMenuOpen(false)} // Close the menu on button click
               >
                 {button}

@@ -15,7 +15,7 @@ export default {
             },
             ybounce: {
                 '0%, 100%': { transform: 'translateY(-0.5rem)' },
-                '50%': { transform: 'translateY(1rem)' },
+                '50%': { transform: 'translateY(0.6rem)' },
             }
         },
         animation:{
