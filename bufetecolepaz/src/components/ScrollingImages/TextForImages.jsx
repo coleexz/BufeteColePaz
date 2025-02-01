@@ -21,7 +21,7 @@ const TextForImages = () => {
           Exclusividad, Prestigio y Confianza
         </h1>
         <p className="text-lg md:text-2xl leading-relaxed">
-          En nuestro <span className="font-semibold">bufete de notarios en Honduras</span>, ofrecemos servicios legales con excelencia y discreción.
+          En nuestro <span className="font-semibold">bufete</span>, ofrecemos servicios legales con excelencia y discreción.
           Ubicados en el exclusivo <span className="font-semibold">Terravista Plaza</span>, un edificio cuya apariencia refleja nuestro compromiso con la calidad, seguridad y la confianza de nuestros clientes.
         </p>
       </motion.div>
