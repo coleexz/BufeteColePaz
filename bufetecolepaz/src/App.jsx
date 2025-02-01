@@ -80,100 +80,97 @@ function App() {
       {/* Header */}
       <div>
         {/* Desktop Header (Large Screens) */}
-        <div className="hidden lg:block">
-          <motion.header
-            variants={headerVariants}
-            animate={isScrollingUp ? "expanded" : "collapsed"}
-            whileHover="expanded"
-            initial="collapsed"
-            className="fixed top-2 flex items-center justify-between bg-black bg-opacity-90 backdrop-blur-md p-4 lg:p-6 text-white lg:w-[103rem] lg:rounded-full z-50 shadow-md overflow-hidden"
-          >
-            <motion.div
-              variants={contentVariants}
-              className="relative flex items-center justify-between w-full px-5"
+        <div className="hidden lg:flex justify-center ">
+            <motion.header
+                variants={headerVariants}
+                animate={isScrollingUp ? "expanded" : "collapsed"}
+                whileHover="expanded"
+                initial="collapsed"
+                className="fixed top-2 flex items-center justify-between bg-black bg-opacity-90 backdrop-blur-md p-4 lg:p-6 text-white lg:w-[103rem] lg:rounded-full z-50 shadow-md overflow-hidden"
             >
-              {/* Logo */}
-              <motion.img
-                src="/CS.png"
-                alt="Logo"
-                className="w-14 h-14"
-                whileHover={{ rotate: 360, transition: { duration: 1 } }}
-              />
+                <motion.div
+                    variants={contentVariants}
+                    className="relative flex items-center justify-between w-full px-5"
+                >
+                    {/* Logo */}
+                    <motion.img
+                        src="/CS.png"
+                        alt="Logo"
+                        className="w-14 h-14"
+                        whileHover={{ rotate: 360, transition: { duration: 1 } }}
+                    />
 
-              {/* Navigation Buttons */}
-              <div className="flex gap-6">
-                {headerButtons.map((button) => (
-                  <motion.button
-                    key={button}
-                    onClick={() => handleNavClick(button)}
-                    variants={navItemVariants}
-                    whileHover="hover"
-                    className="rounded-full text-white text-xl hover:text-[#B69D74] px-4"
-                  >
-                    {button}
-                  </motion.button>
-                ))}
-              </div>
-            </motion.div>
-          </motion.header>
+                    {/* Navigation Buttons */}
+                    <div className="flex gap-6">
+                        {headerButtons.map((button) => (
+                            <motion.button
+                                key={button}
+                                onClick={() => handleNavClick(button)}
+                                variants={navItemVariants}
+                                whileTap={{ scale: 0.95 }} /* Tap effect instead of hover */
+                                className="rounded-full hover:text-[#B69D74] hover:animate-pulse transition-colors duration-500 text-white text-xl active:text-[#B69D74] px-4"
+                            >
+                                {button}
+                            </motion.button>
+                        ))}
+                    </div>
+                </motion.div>
+            </motion.header>
         </div>
 
-        {/* Mobile Header (Always Visible on Mobile) */}
-        <div className="lg:hidden fixed top-0 w-screen z-50">
-          <div className="flex items-center justify-between bg-black p-6 text-white shadow-md">
+        {/* Tablet and Mobile Header (Hamburger Menu for Both) */}
+        <div className="md:block lg:hidden fixed top-0 w-screen z-50">
+        <div className="flex items-center justify-between bg-black p-6 text-white shadow-md">
             {/* Logo */}
             <div className="px-5">
-              <img src="/CS.png" alt="Logo" className="w-14 h-14" />
+            <img src="/CS.png" alt="Logo" className="w-14 h-14" />
             </div>
-            {/* Hamburger Menu */}
-            <div className="pr-5">
-              <button
-                onClick={() => setMenuOpen(!menuOpen)}
-                className="focus:outline-none text-white hover:text-[#B69D74]"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  className="w-8 h-8"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
+            {/* Hamburger Menu Button */}
+            <div className="pr-5">
+            <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="focus:outline-none text-white active:text-[#B69D74]"
+            >
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="w-8 h-8"
+                >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            </div>
+        </div>
+        </div>
+
+        {/* Tablet & Mobile Dropdown Menu */}
+        <AnimatePresence>
         {menuOpen && (
-          <motion.div
+            <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed top-20 left-0 w-full bg-black p-6 z-40 lg:hidden"
-          >
+            className="fixed top-20 left-0 w-full bg-black p-6 z-40 md:block lg:hidden"
+            >
             <div className="flex flex-col justify-start items-start gap-4">
-              {headerButtons.map((button) => (
+                {headerButtons.map((button) => (
                 <button
-                  key={button}
-                  onClick={() => handleNavClick(button)}
-                  className="text-white hover:text-[#B69D74] text-lg"
+                    key={button}
+                    onClick={() => handleNavClick(button)}
+                    className="text-white active:text-[#B69D74] text-lg"
                 >
-                  {button}
+                    {button}
                 </button>
-              ))}
+                ))}
             </div>
-          </motion.div>
+            </motion.div>
         )}
-      </AnimatePresence>
+        </AnimatePresence>
+        </div>
 
       {/* Main Content */}
       <div>

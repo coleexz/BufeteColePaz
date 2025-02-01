@@ -11,13 +11,13 @@
 
 .slide-track, .reverse-slide-track {
     display: flex;
-    animation: marquee 30s linear infinite;
-    width: calc(35vw * 14);
+    animation: marquee 40s ease-in-out infinite;
+    width: calc(35vw * 14 * 2); /* Doubled for smooth looping */
 }
 
 .reverse-slide-track {
     direction: rtl;
-    animation: marquee-reverse 30s linear infinite;
+    animation: marquee-reverse 40s ease-in-out infinite;
 }
 
 .slide {
@@ -35,22 +35,15 @@
     object-fit: cover;
 }
 
+/* ----------- Smooth Marquee Animations ----------- */
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-35vw * 7));
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-35vw * 7)); }
 }
 
 @keyframes marquee-reverse {
-    0% {
-        transform: translateX(calc(-35vw * 7));
-    }
-    100% {
-        transform: translateX(0);
-    }
+    0% { transform: translateX(calc(-35vw * 7)); }
+    100% { transform: translateX(0); }
 }
 
 /* ----------- RESPONSIVE BREAKPOINTS ----------- */
@@ -58,20 +51,35 @@
 @media (max-width: 768px) {
     .slider {
         height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slide-track, .reverse-slide-track {
+        display: flex;
+        width: calc(50vw * 14 * 2); /* Double the width for seamless looping */
+        animation: marquee 40s linear infinite;
+    }
+
+    .reverse-slide-track {
+        animation: marquee-reverse 40s linear infinite;
     }
 
     .slide {
         width: 50vw;
         height: 300px;
+        flex-shrink: 0;
     }
 
-    .slide-track, .reverse-slide-track {
-        width: calc(50vw * 14);
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     @keyframes marquee {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-50vw * 7)); }
+        100% { transform: translateX(calc(-50vw * 7)); } /* Ensure smooth loop */
     }
 
     @keyframes marquee-reverse {
@@ -80,6 +88,7 @@
     }
 }
 
+
 /* Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .slider {
@@ -87,21 +96,22 @@
     }
 
     .slide {
-        width: 95vw;
+        width: 90vw;
         height: 400px;
     }
 
     .slide-track, .reverse-slide-track {
-        width: calc(70vw * 14);
+        width: calc(90vw * 14 * 2);
+        will-change: transform;
     }
 
     @keyframes marquee {
         0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-70vw * 7)); }
+        100% { transform: translateX(calc(-90vw * 7)); }
     }
 
     @keyframes marquee-reverse {
-        0% { transform: translateX(calc(-70vw * 7)); }
+        0% { transform: translateX(calc(-90vw * 7)); }
         100% { transform: translateX(0); }
     }
 }
