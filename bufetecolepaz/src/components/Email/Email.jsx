@@ -27,16 +27,16 @@ const Email = () => {
     }
 
 return (
-    <div className="h-fit w-screen bg-[#e0e1dd] text-[#333] pb-6">
+    <div className="h-fit w-screen bg-[#e0e1dd] text-[#333]  pb-6">
             <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-2xl pt-8 py-4 font-bold">
+                    <h1 className="text-2xl pt-12 py-10 font-bold">
                             SEND US AN EMAIL
                     </h1>
 
                     <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-4">
                             <input
                                     className="border-4 px-12 py-6 border-black bg-[#e0e1dd] placeholder-current"
-                                    placeholder="Name" 
+                                    placeholder="Name"
                                     value={name}
                                     onChange={handleNameChange}
                             />

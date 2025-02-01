@@ -4,7 +4,7 @@ import { faMapMarkerAlt, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-
 
 const ContactUs = () => {
     return (
-        <div className="w-screen h-[40rem] px-[0.1rem] bg-white relative flex justify-center items-center">
+        <div className="w-screen h-[34rem] px-[0.1rem] bg-white relative flex justify-center items-center">
             {/* Background Box Effect */}
             <div className="absolute w-11/12 md:w-10/12 lg:w-3/4 lg:h-4/6 h-[85%] bg-[#212121] opacity-70 rounded-xl"></div>
 
