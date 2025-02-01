@@ -9,6 +9,8 @@ import Areas from './components/Areas/Areas.jsx';
 import ContactUs from './components/ContactUs/ContactUs.jsx';
 import AboutClaudia from './components/AboutClaudia/AboutClaudia.jsx';
 import Email from './components/Email/Email.jsx';
+import ScrollingImages from './components/ScrollingImages/Scrollingimages.jsx';
+import TextForImages from './components/ScrollingImages/TextForImages.jsx';
 
 import FloatingWhatsApp from './components/FloatingWhatsapp.jsx';
 
@@ -179,6 +181,9 @@ function App() {
         <div id="home">
           <Home />
         </div>
+
+        <TextForImages />
+        <ScrollingImages />
 
         {/* Services Section (Areas) */}
         <div id="services">

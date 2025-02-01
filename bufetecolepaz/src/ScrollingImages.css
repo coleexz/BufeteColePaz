@@ -1,0 +1,107 @@
+.slider {
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    width: 100vw;
+    height: 400px;
+    background-color: #212121;
+    position: relative;
+}
+
+.slide-track, .reverse-slide-track {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    width: calc(35vw * 14);
+}
+
+.reverse-slide-track {
+    direction: rtl;
+    animation: marquee-reverse 30s linear infinite;
+}
+
+.slide {
+    width: 35vw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-35vw * 7));
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(calc(-35vw * 7));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ----------- RESPONSIVE BREAKPOINTS ----------- */
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .slider {
+        height: 300px;
+    }
+
+    .slide {
+        width: 50vw;
+        height: 300px;
+    }
+
+    .slide-track, .reverse-slide-track {
+        width: calc(50vw * 14);
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50vw * 7)); }
+    }
+
+    @keyframes marquee-reverse {
+        0% { transform: translateX(calc(-50vw * 7)); }
+        100% { transform: translateX(0); }
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .slider {
+        height: 200px;
+    }
+
+    .slide {
+        width: 70vw;
+        height: 200px;
+    }
+
+    .slide-track, .reverse-slide-track {
+        width: calc(70vw * 14);
+    }
+
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-70vw * 7)); }
+    }
+
+    @keyframes marquee-reverse {
+        0% { transform: translateX(calc(-70vw * 7)); }
+        100% { transform: translateX(0); }
+    }
+}

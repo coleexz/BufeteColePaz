@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AboutClaudia = () => {
   const ClaudiaEducation = [
@@ -19,42 +20,70 @@ const AboutClaudia = () => {
   ];
 
   return (
-    <div className="bg-[#444444] py-14 text-white px-4">
+    <motion.div
+      className="bg-[#444444] py-14 text-white px-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <h1 className="text-3xl lg:text-5xl font-bold text-center mb-8">
+        <motion.h1
+          className="text-3xl lg:text-5xl font-bold text-center mb-8"
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
           Claudia Francisca Paz South
-        </h1>
+        </motion.h1>
 
         {/* Photo Section */}
         <div className="flex justify-center mb-8">
-          <button className="border-8 border-[#B69D74] w-60 h-60 lg:w-80 lg:h-80 rounded-2xl animate-[ybounce_8s_infinite]">
+          <motion.button
+            className="border-8 border-[#B69D74] w-60 h-60 lg:w-80 lg:h-80 rounded-2xl"
+            whileInView={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+          >
             {/* Replace with an actual image if available */}
             foto de mama
-          </button>
+          </motion.button>
         </div>
 
         {/* Description */}
-        <div className="mx-auto mb-12">
+        <motion.div
+          className="mx-auto mb-12"
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
           <p className="text-md bg-[#333] rounded-lg p-6 text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt quas
             optio cupiditate in, harum aspernatur mollitia voluptatem quam?
             Exercitationem rem quod possimus dolores alias molestias molestiae
             voluptatem ab ipsum quam!
           </p>
-        </div>
+        </motion.div>
 
         {/* Education Section Title */}
-        <h2 className="text-3xl lg:text-5xl font-bold text-center mb-8">
+        <motion.h2
+          className="text-3xl lg:text-5xl font-bold text-center mb-8"
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
           Education
-        </h2>
+        </motion.h2>
 
         {/* Education Cards */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {ClaudiaEducation.map((education, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-[#333] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 + index * 0.3 }}
+              whileHover={{ scale: 1.05 }}
             >
               <h3 className="text-2xl lg:text-4xl font-bold mb-2">
                 {education.grado}
@@ -68,11 +97,11 @@ const AboutClaudia = () => {
               <p className="text-md leading-relaxed">
                 {education.descripcion}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
