@@ -4,7 +4,7 @@
     display: flex;
     align-items: flex-end;
     width: 100vw;
-    height: 400px;
+    height: 500px;
     background-color: #212121;
     position: relative;
 }
@@ -22,7 +22,7 @@
 
 .slide {
     width: 35vw;
-    height: 400px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,12 +83,12 @@
 /* Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .slider {
-        height: 200px;
+        height: 400px;
     }
 
     .slide {
-        width: 70vw;
-        height: 200px;
+        width: 95vw;
+        height: 400px;
     }
 
     .slide-track, .reverse-slide-track {
