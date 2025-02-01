@@ -10,12 +10,10 @@ import ContactUs from './components/ContactUs/ContactUs.jsx';
 import AboutClaudia from './components/AboutClaudia/AboutClaudia.jsx';
 import Email from './components/Email/Email.jsx';
 
-import FloatingWhatsApp from './components/FloatingWhatsApp';
+import FloatingWhatsApp from './components/FloatingWhatsapp.jsx';
 
 
-// Import WhatsApp icon from FontAwesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 function App() {
 
   const headerButtons = ['Home', 'Services', 'About Us', 'Contact Us', 'Email'];
