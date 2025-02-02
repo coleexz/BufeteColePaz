@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ContactUs = () => {
     return (
@@ -14,7 +12,7 @@ const ContactUs = () => {
         >
             {/* Background Box Effect */}
             <motion.div
-                className="absolute w-11/12 md:w-10/12 lg:w-3/4 lg:h-4/6 h-[85%] bg-[#212121] opacity-70 rounded-xl"
+                className="absolute w-11/12 md:w-10/12 lg:w-3/4 lg:h-4/6 h-[85%] bg-[#5a5243] opacity-70 rounded-xl"
                 initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 0.7 }}
                 viewport={{ once: true, amount: 0.3 }}
@@ -33,7 +31,7 @@ const ContactUs = () => {
 
                     {/* Section Title */}
                     <motion.h1
-                        className="text-3xl lg:text-4xl font-bold text-white text-center"
+                        className="text-3xl lg:text-4xl font-bold text-[#B69D74] text-center"
                         initial={{ y: -30, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true, amount: 0.3 }}
@@ -47,19 +45,19 @@ const ContactUs = () => {
                         {/* Contact details array for mapping */}
                         {[
                             {
-                                icon: faMapMarkerAlt,
+                                icon: "https://img.icons8.com/?size=100&id=59830&format=png&color=b69d74",
                                 title: "Location",
                                 text: "Plaza Terravista",
                                 link: "View on Google Map",
                             },
                             {
-                                icon: faEnvelope,
+                                icon: "https://img.icons8.com/?size=100&id=60688&format=png&color=b69d74",
                                 title: "E-mail",
-                                text: "jcolemedina@yahoo.com",
+                                text: "jcolemedina@yahoo.com\ncfpazsouth@yahoo.com",
                                 link: null,
                             },
                             {
-                                icon: faPhoneAlt,
+                                icon: "https://img.icons8.com/?size=100&id=78382&format=png&color=b69d74",
                                 title: "Phone",
                                 text: "+504 9639-9980",
                                 link: null,
@@ -80,12 +78,12 @@ const ContactUs = () => {
                                     transition={{ type: "spring", stiffness: 300 }}
                                 >
                                     <div className="bg-[#444] p-4 md:p-6 rounded-full shadow-lg">
-                                        <FontAwesomeIcon icon={contact.icon} className="text-2xl md:text-3xl" />
+                                        <img src={contact.icon} className = "w-10 h-10"></img>
                                     </div>
                                 </motion.div>
                                 {/* Right - Text */}
                                 <div>
-                                    <h2 className="text-xl md:text-2xl font-bold">{contact.title}</h2>
+                                    <h2 className="text-xl  text-[#B69D74] md:text-2xl font-bold">{contact.title}</h2>
                                     <p className="text-md md:text-lg mt-2">{contact.text}</p>
                                     {contact.link && (
                                         <a href="#" className="text-md md:text-lg underline mt-2 inline-block">

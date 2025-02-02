@@ -44,7 +44,7 @@ const Areas = () => {
     },
     {
       name: "Business Law",
-      
+
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
       icon: "https://img.icons8.com/?size=100&id=yHmk9ruAuVj3&format=png&color=b69d74",
     },
@@ -59,8 +59,8 @@ const Areas = () => {
     <div className="w-screen h-fit bg-[#e0e1dd] pt-12 overflow-hidden py-10">
       {/* Title Section */}
       <div className="flex flex-col h-10 w-screen items-center justify-center">
-        <h1 className="text-sm py-4 font-bold text-[#B69D74]">HOW CAN WE HELP YOU?</h1>
-        <h1 className="text-2xl font-semibold text-[#333]">Our Legal Practice Areas</h1>
+        <h1 className="text-lg py-4 font-bold text-[#B69D74]">HOW CAN WE HELP YOU?</h1>
+        <h1 className="text-4xl font-semibold text-[#333]">Our Legal Practice Areas</h1>
       </div>
 
       {/* Areas Section */}

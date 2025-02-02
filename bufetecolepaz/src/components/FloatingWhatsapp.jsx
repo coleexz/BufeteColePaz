@@ -51,7 +51,7 @@ const FloatingWhatsApp = () => {
       >
         {/* WhatsApp Button with reduced padding and icon wiggle */}
         <motion.a
-          href="https://wa.me/1234567890"
+          href="https://wa.me/50496399980"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 text-white p-3 px-4 rounded-full shadow-xl"

@@ -21,7 +21,7 @@ const AboutClaudia = () => {
 
   return (
     <motion.div
-      className="bg-[#444444] py-14 text-white px-4"
+      className="bg-[#5A5243] py-14 text-white px-4"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
