@@ -90,13 +90,13 @@ function App() {
             >
                 <motion.div
                     variants={contentVariants}
-                    className="relative flex items-center justify-between w-full px-5"
+                    className="relative flex items-center justify-between w-full px-5 pt-2 "
                 >
                     {/* Logo */}
                     <motion.img
-                        src="/CS.png"
+                        src="/Logo Original.png"
                         alt="Logo"
-                        className="w-14 h-14"
+                        className="w-[80px] h-[85px]"
                         whileHover={{ rotate: 360, transition: { duration: 1 } }}
                     />
 
@@ -123,7 +123,7 @@ function App() {
         <div className="flex items-center justify-between bg-black p-6 text-white shadow-md">
             {/* Logo */}
             <div className="px-5">
-            <img src="/CS.png" alt="Logo" className="w-14 h-14" />
+            <img src="/Logo Original.png" alt="Logo" className="w-20 h-20" />
             </div>
 
             {/* Hamburger Menu Button */}

@@ -150,7 +150,7 @@ const Home = () => {
                         {/* Image container */}
                         <div className="relative z-20 w-full">
                             <img
-                                src="/CS.png"
+                                src="/Logo Original.png"
                                 alt="imagen"
                                 className="w-[23rem] lg:w-[30rem] h-[25rem] lg:h-[34rem] object-contain shadow-lg"
                             />
