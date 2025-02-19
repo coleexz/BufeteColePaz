@@ -73,7 +73,7 @@ const Home = () => {
                             transition={{ duration: 1, ease: "easeInOut" }}
                             className = "lg:pt-[6rem]"
                         >
-                            <h1 className="text-5xl text-white font-bold pb-2 pr-[10.8rem] ">
+                            <h1 className="text-5xl text-white font-bold pb-2 ml-[5px] pr-[10.8rem] ">
                                 Bufete Cole South
                             </h1>
                         </motion.div>
